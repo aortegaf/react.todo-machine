@@ -1,5 +1,5 @@
 function TodoSearch() {
-  return <input placeholder="Buscar..." />;
+  return <input placeholder="Search..." />;
 }
 
 export { TodoSearch };

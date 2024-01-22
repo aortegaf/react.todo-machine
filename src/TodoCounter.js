@@ -1,5 +1,9 @@
-function TodoCounter() {
-  return <h1>3 of 5 completed</h1>;
+function TodoCounter(props) {
+  return (
+    <h1>
+      {props.completed} of {props.total} completed
+    </h1>
+  );
 }
 
 export { TodoCounter };

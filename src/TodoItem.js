@@ -1,12 +1,8 @@
-function TodoItem() {
+function TodoItem(props) {
   return (
-    <ul>
-      <li>
-        <button>Check</button>
-        <p>Task</p>
-        <button>Remove</button>
-      </li>
-    </ul>
+    <li>
+      <p>{props.task}</p>
+    </li>
   );
 }
 
