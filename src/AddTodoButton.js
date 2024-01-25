@@ -1,5 +1,5 @@
 function AddTodoButton() {
-  return <button>Add +</button>;
+  return <button>+</button>;
 }
 
 export { AddTodoButton };

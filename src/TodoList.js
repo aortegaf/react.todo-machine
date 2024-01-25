@@ -1,5 +1,5 @@
 function TodoList(props) {
-  return <ul>{props.children}</ul>;
+  return <div className="list-container">{props.children}</div>;
 }
 
 export { TodoList };

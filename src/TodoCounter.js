@@ -1,8 +1,8 @@
 function TodoCounter(props) {
   return (
-    <h1>
+    <h2>
       {props.completed} of {props.total} completed
-    </h1>
+    </h2>
   );
 }
 

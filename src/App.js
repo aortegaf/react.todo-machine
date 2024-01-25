@@ -1,30 +1,48 @@
+import "./App.css";
 import { TodoCounter } from "./TodoCounter";
 import { TodoSearch } from "./TodoSearch";
 import { TodoList } from "./TodoList";
 import { TodoItem } from "./TodoItem";
 import { AddTodoButton } from "./AddTodoButton";
-import "./App.css";
 
 const defaultTodos = [
   { text: "1st Task", completed: false },
-  { text: "2nd Task", completed: false },
+  {
+    text: "2nd Task",
+    completed: false,
+  },
   { text: "3rd Task", completed: false },
   { text: "4th Task", completed: false },
+  // {
+  //   text: "TaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTask",
+  //   completed: false,
+  // },
 ];
 
 function App() {
   return (
     <>
-      <TodoCounter completed={1} total={3} />
-      <TodoSearch />
+      <section>
+        <div className="app-container">
+          <div className="list-header">
+            <h1>TO DO List</h1>
+            <TodoCounter completed={1} total={3} />
+            <TodoSearch />
+          </div>
 
-      <TodoList>
-        {defaultTodos.map((todo) => (
-          <TodoItem task={todo.text} />
-        ))}
-      </TodoList>
+          <TodoList>
+            {defaultTodos.map((todo) => (
+              <TodoItem task={todo.text} />
+            ))}
+          </TodoList>
 
-      <AddTodoButton />
+          <div className="button-container">
+            <AddTodoButton />
+          </div>
+        </div>
+      </section>
+
+      <footer>Developed by: Andrés Ortega</footer>
     </>
   );
 }
