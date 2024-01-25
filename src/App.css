@@ -90,6 +90,10 @@ p {
   white-space: normal;
 }
 
+.completed {
+  text-decoration: line-through;
+}
+
 .item-options {
   margin-right: 2rem;
   visibility: hidden;

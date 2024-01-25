@@ -6,7 +6,7 @@ import { TodoItem } from "./TodoItem";
 import { AddTodoButton } from "./AddTodoButton";
 
 const defaultTodos = [
-  { text: "1st Task", completed: false },
+  { text: "1st Task", completed: true },
   {
     text: "2nd Task",
     completed: false,
@@ -32,7 +32,11 @@ function App() {
 
           <TodoList>
             {defaultTodos.map((todo) => (
-              <TodoItem task={todo.text} />
+              <TodoItem
+                key={todo.text}
+                task={todo.text}
+                completed={todo.completed}
+              />
             ))}
           </TodoList>
 
