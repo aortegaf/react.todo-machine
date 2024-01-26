@@ -1,5 +1,11 @@
-function TodoSearch() {
-  return <input placeholder="Search..." />;
+function TodoSearch(props) {
+  return (
+    <input
+      placeholder="Search..."
+      value={props.searchValue}
+      onChange={(event) => props.setSearchValue(event.target.value)}
+    />
+  );
 }
 
 export { TodoSearch };

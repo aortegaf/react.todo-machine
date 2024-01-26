@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { TodoCounter } from "./TodoCounter";
 import { TodoSearch } from "./TodoSearch";
@@ -20,14 +21,25 @@ const defaultTodos = [
 ];
 
 function App() {
+  const [todos, setTodos] = React.useState(defaultTodos);
+  const [searchValue, setSearchValue] = React.useState("");
+
+  const completedTodos = todos.filter((todo) => todo.completed).length;
+  const totalTodos = todos.length;
+
+  console.log("Escribiste: " + searchValue);
+
   return (
     <>
       <section>
         <div className="app-container">
           <div className="list-header">
             <h1>TO DO List</h1>
-            <TodoCounter completed={1} total={3} />
-            <TodoSearch />
+            <TodoCounter completed={completedTodos} total={totalTodos} />
+            <TodoSearch
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+            />
           </div>
 
           <TodoList>
