@@ -4,8 +4,12 @@ function TodoItem(props) {
       <span className="marker">•</span>
       <p className={`${props.completed && "completed"}`}>{props.task}</p>
       <div className="item-options">
-        <i id="checkItem">V</i>
-        <i id="deleteItem">X</i>
+        <i id="checkItem" onClick={props.onComplete}>
+          V
+        </i>
+        <i id="deleteItem" onClick={props.onDelete}>
+          X
+        </i>
       </div>
     </li>
   );

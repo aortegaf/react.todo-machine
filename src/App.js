@@ -32,7 +32,20 @@ function App() {
     return todoText.includes(searchText);
   });
 
-  console.log("Escribiste: " + searchValue);
+  const completeTodo = (text) => {
+    const updatedTodos = [...todos];
+    const index = updatedTodos.findIndex((todo) => todo.text == text);
+    const todo = updatedTodos[index];
+    todo.completed = !todo.completed;
+    setTodos(updatedTodos);
+  };
+
+  const deleteTodo = (text) => {
+    const updatedTodos = [...todos];
+    const index = updatedTodos.findIndex((todo) => todo.text == text);
+    updatedTodos.splice(index, 1);
+    setTodos(updatedTodos);
+  };
 
   return (
     <>
@@ -53,6 +66,8 @@ function App() {
                 key={todo.text}
                 task={todo.text}
                 completed={todo.completed}
+                onComplete={() => completeTodo(todo.text)}
+                onDelete={() => deleteTodo(todo.text)}
               />
             ))}
           </TodoList>
