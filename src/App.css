@@ -105,6 +105,12 @@ p {
 
 i {
   color: #2f3e46;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+i:hover {
+  color: #cad2c5;
 }
 
 .button-container {

@@ -34,7 +34,7 @@ function App() {
 
   const completeTodo = (text) => {
     const updatedTodos = [...todos];
-    const index = updatedTodos.findIndex((todo) => todo.text == text);
+    const index = updatedTodos.findIndex((todo) => todo.text === text);
     const todo = updatedTodos[index];
     todo.completed = !todo.completed;
     setTodos(updatedTodos);
@@ -42,7 +42,7 @@ function App() {
 
   const deleteTodo = (text) => {
     const updatedTodos = [...todos];
-    const index = updatedTodos.findIndex((todo) => todo.text == text);
+    const index = updatedTodos.findIndex((todo) => todo.text === text);
     updatedTodos.splice(index, 1);
     setTodos(updatedTodos);
   };

@@ -1,3 +1,6 @@
+import { CiCircleCheck } from "react-icons/ci";
+import { CiTrash } from "react-icons/ci";
+
 function TodoItem(props) {
   return (
     <li>
@@ -5,10 +8,10 @@ function TodoItem(props) {
       <p className={`${props.completed && "completed"}`}>{props.task}</p>
       <div className="item-options">
         <i id="checkItem" onClick={props.onComplete}>
-          V
+          <CiCircleCheck />
         </i>
         <i id="deleteItem" onClick={props.onDelete}>
-          X
+          <CiTrash />
         </i>
       </div>
     </li>
