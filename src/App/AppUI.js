@@ -1,40 +1,39 @@
+import React from "react";
 import { TodoCounter } from "../TodoCounter";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 import { AddTodoButton } from "../AddTodoButton";
 import { TodosLoading } from "../TodosLoading";
+import { TodoContext } from "../TodoContext";
 import "./AppUI.css";
 
-function AppUI(props) {
+function AppUI() {
+  const { loading, error, searchedTodos, completeTodo, deleteTodo } =
+    React.useContext(TodoContext);
+
   return (
     <>
       <section>
-        {props.loading && <TodosLoading />}
-        {props.error && <p>"ERROR"</p>}
+        {loading && <TodosLoading />}
+        {error && <p>"ERROR"</p>}
 
-        {!props.loading && !props.error && (
+        {!loading && !error && (
           <div className="app-container">
             <div className="list-header">
               <h1>TO DO List</h1>
-              <TodoCounter
-                completed={props.completedTodos}
-                total={props.totalTodos}
-              />
-              <TodoSearch
-                searchValue={props.searchValue}
-                setSearchValue={props.setSearchValue}
-              />
+              <TodoCounter />
+              <TodoSearch />
             </div>
 
             <TodoList>
-              {props.searchedTodos.map((todo) => (
+              {searchedTodos.map((todo) => (
                 <TodoItem
                   key={todo.text}
                   task={todo.text}
                   completed={todo.completed}
-                  onComplete={() => props.completeTodo(todo.text)}
-                  onDelete={() => props.deleteTodo(todo.text)}
+                  onComplete={() => completeTodo(todo.text)}
+                  onDelete={() => deleteTodo(todo.text)}
                 />
               ))}
             </TodoList>

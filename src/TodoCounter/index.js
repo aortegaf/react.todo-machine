@@ -1,10 +1,15 @@
-function TodoCounter(props) {
-  if (props.completed === props.total && props.total !== 0) {
+import React from "react";
+import { TodoContext } from "../TodoContext";
+
+function TodoCounter() {
+  const { completedTodos, totalTodos } = React.useContext(TodoContext);
+
+  if (completedTodos === totalTodos && totalTodos !== 0) {
     return <h2>All done</h2>;
   } else {
     return (
       <h2>
-        {props.completed} of {props.total} completed
+        {completedTodos} of {totalTodos} completed
       </h2>
     );
   }
