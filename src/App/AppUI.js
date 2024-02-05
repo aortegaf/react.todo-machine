@@ -23,6 +23,9 @@ function AppUI(props) {
           </div>
 
           <TodoList>
+            {props.loading && <p>"CARGANDO..."</p>}
+            {props.error && <p>"ERROR"</p>}
+
             {props.searchedTodos.map((todo) => (
               <TodoItem
                 key={todo.text}

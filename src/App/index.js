@@ -19,7 +19,12 @@ import { AppUI } from "./AppUI";
 // localStorage.setItem("TODO_LIST", JSON.stringify(defaultTodos));
 
 function App() {
-  const [todos, saveTodos] = useLocalStorage("TODO_LIST", []);
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading,
+    error,
+  } = useLocalStorage("TODO_LIST", []);
   const [searchValue, setSearchValue] = React.useState("");
 
   const completedTodos = todos.filter((todo) => todo.completed).length;
@@ -47,6 +52,8 @@ function App() {
 
   return (
     <AppUI
+      loading={loading}
+      error={error}
       completedTodos={completedTodos}
       totalTodos={totalTodos}
       searchValue={searchValue}
