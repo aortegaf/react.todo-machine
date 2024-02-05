@@ -5,19 +5,26 @@ import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 import { AddTodoButton } from "../AddTodoButton";
 import { TodosLoading } from "../TodosLoading";
+import { Modal } from "../Modal";
 import { TodoContext } from "../TodoContext";
 import "./AppUI.css";
 
 function AppUI() {
-  const { loading, error, searchedTodos, completeTodo, deleteTodo } =
-    React.useContext(TodoContext);
+  const {
+    loading,
+    error,
+    searchedTodos,
+    completeTodo,
+    deleteTodo,
+    openModal,
+    setOpenModal,
+  } = React.useContext(TodoContext);
 
   return (
     <>
       <section>
         {loading && <TodosLoading />}
         {error && <p>"ERROR"</p>}
-
         {!loading && !error && (
           <div className="app-container">
             <div className="list-header">
@@ -39,12 +46,13 @@ function AppUI() {
             </TodoList>
 
             <div className="button-container">
-              <AddTodoButton />
+              <AddTodoButton setOpenModal={setOpenModal} />
             </div>
+
+            {openModal && <Modal>MODAL</Modal>}
           </div>
         )}
       </section>
-
       <footer>Developed by: Andrés Ortega</footer>
     </>
   );
