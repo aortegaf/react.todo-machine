@@ -6,6 +6,7 @@ import { TodoItem } from "../TodoItem";
 import { AddTodoButton } from "../AddTodoButton";
 import { TodosLoading } from "../TodosLoading";
 import { Modal } from "../Modal";
+import { TodoForm } from "../TodoForm";
 import { TodoContext } from "../TodoContext";
 import "./AppUI.css";
 
@@ -49,7 +50,11 @@ function AppUI() {
               <AddTodoButton setOpenModal={setOpenModal} />
             </div>
 
-            {openModal && <Modal>MODAL</Modal>}
+            {openModal && (
+              <Modal>
+                <TodoForm setOpenModal={setOpenModal} />
+              </Modal>
+            )}
           </div>
         )}
       </section>

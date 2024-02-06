@@ -1,8 +1,11 @@
+import "./AddTodoButton.css";
+
 function AddTodoButton(props) {
   return (
     <button
+      className="open-modal-button"
       onClick={() => {
-        props.setOpenModal((state) => !state);
+        props.setOpenModal(true);
       }}
     >
       +
