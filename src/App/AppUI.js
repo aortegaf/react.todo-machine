@@ -15,6 +15,7 @@ function AppUI() {
     loading,
     error,
     searchedTodos,
+    addTodo,
     completeTodo,
     deleteTodo,
     openModal,
@@ -25,7 +26,7 @@ function AppUI() {
     <>
       <section>
         {loading && <TodosLoading />}
-        {error && <p>"ERROR"</p>}
+        {error && <p>"localStorage isn't working"</p>}
         {!loading && !error && (
           <div className="app-container">
             <div className="list-header">
@@ -52,7 +53,7 @@ function AppUI() {
 
             {openModal && (
               <Modal>
-                <TodoForm setOpenModal={setOpenModal} />
+                <TodoForm />
               </Modal>
             )}
           </div>

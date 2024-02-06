@@ -35,19 +35,3 @@ function useLocalStorage(itemName, itemInitialState) {
 }
 
 export { useLocalStorage };
-
-// const defaultTodos = [
-//   { text: "1st Task", completed: true },
-//   {
-//     text: "2nd Task",
-//     completed: false,
-//   },
-//   { text: "3rd Task", completed: false },
-//   { text: "4th Task", completed: false },
-//   {
-//     text: "TaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTaskTask",
-//     completed: false,
-//   },
-// ];
-
-// localStorage.setItem("TODO_LIST", JSON.stringify(defaultTodos));

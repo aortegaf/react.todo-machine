@@ -22,6 +22,15 @@ function TodoProvider({ children }) {
     return todoText.includes(searchText);
   });
 
+  const addTodo = (text) => {
+    const updatedTodos = [...todos];
+    updatedTodos.push({
+      text: text,
+      completed: false,
+    });
+    saveTodos(updatedTodos);
+  };
+
   const completeTodo = (text) => {
     const updatedTodos = [...todos];
     const index = updatedTodos.findIndex((todo) => todo.text === text);
@@ -47,6 +56,7 @@ function TodoProvider({ children }) {
         searchValue,
         setSearchValue,
         searchedTodos,
+        addTodo,
         completeTodo,
         deleteTodo,
         openModal,
