@@ -117,3 +117,58 @@ footer {
   right: 0;
   color: #2f3e46;
 }
+
+@media (max-width: 900px) {
+  .app-container {
+    height: 80vh;
+    width: 100vw;
+    box-shadow: none;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  .list-container {
+    overflow-y: scroll;
+    scrollbar-color: #52796f #cad2c5;
+    scrollbar-width: thin;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  li:hover {
+    background-color: transparent;
+    color: #2f3e46;
+  }
+
+  .item-options {
+    display: flex;
+    margin-right: 1rem;
+    visibility: visible;
+  }
+
+  #checkItem {
+    color: #52796f;
+  }
+
+  #deleteItem {
+    color: rgb(197, 0, 0);
+  }
+
+  .marker {
+    margin-right: 0;
+    margin-left: 2rem;
+    font-size: xx-large;
+  }
+
+  p {
+    margin-right: 2rem;
+  }
+}

@@ -21,3 +21,9 @@ input {
   font-size: larger;
   color: #2f3e46;
 }
+
+@media (max-width: 900px) {
+  .search-container {
+    width: 60%;
+  }
+}
