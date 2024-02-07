@@ -10,7 +10,7 @@
   background: linear-gradient(to top, #cad2c5, #52796fd1);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .Modal {
     display: flex;
     justify-content: center;
