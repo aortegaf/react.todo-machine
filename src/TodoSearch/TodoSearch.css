@@ -1,0 +1,23 @@
+.search-container {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #2f3e46;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  font-size: larger;
+  color: #2f3e46;
+}

@@ -12,7 +12,7 @@ section {
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  box-shadow: 0 0 20px #354f52;
+  box-shadow: 0 0 100px #52796f;
   border-radius: 10px;
 }
 
@@ -34,17 +34,6 @@ h2 {
   font-size: 1.5rem;
   font-weight: bold;
   color: #84a98c;
-}
-
-input {
-  padding: 0.5rem;
-  width: 50%;
-  margin-bottom: 1rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  color: #2f3e46;
-  margin: auto;
 }
 
 .list-container {
