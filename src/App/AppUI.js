@@ -59,7 +59,7 @@ function AppUI() {
           </div>
         )}
       </section>
-      <footer>Developed by: Andrés Ortega</footer>
+      <footer>By: Andrés Ortega</footer>
     </>
   );
 }

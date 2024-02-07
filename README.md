@@ -1,12 +1,10 @@
-## Getting Started with Create React App
+# TO DO List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TO DO List is a React-based application for managing and tracking tasks.
 
-## Available Scripts
+### In the project directory, you can run:
 
-In the project directory, you can run:
-
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
