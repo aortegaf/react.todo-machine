@@ -31,17 +31,15 @@ function TodoProvider({ children }) {
     saveTodos(updatedTodos);
   };
 
-  const completeTodo = (text) => {
+  const completeTodo = (index) => {
     const updatedTodos = [...todos];
-    const index = updatedTodos.findIndex((todo) => todo.text === text);
     const todo = updatedTodos[index];
     todo.completed = !todo.completed;
     saveTodos(updatedTodos);
   };
 
-  const deleteTodo = (text) => {
+  const deleteTodo = (index) => {
     const updatedTodos = [...todos];
-    const index = updatedTodos.findIndex((todo) => todo.text === text);
     updatedTodos.splice(index, 1);
     saveTodos(updatedTodos);
   };

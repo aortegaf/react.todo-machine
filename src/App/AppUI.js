@@ -36,13 +36,13 @@ function AppUI() {
             </div>
 
             <TodoList>
-              {searchedTodos.map((todo) => (
+              {searchedTodos.map((todo, index) => (
                 <TodoItem
-                  key={todo.text}
+                  key={index}
                   task={todo.text}
                   completed={todo.completed}
-                  onComplete={() => completeTodo(todo.text)}
-                  onDelete={() => deleteTodo(todo.text)}
+                  onComplete={() => completeTodo(index)}
+                  onDelete={() => deleteTodo(index)}
                 />
               ))}
             </TodoList>

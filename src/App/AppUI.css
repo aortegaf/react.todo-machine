@@ -36,6 +36,11 @@ h2 {
   color: #84a98c;
 }
 
+h3 {
+  font-weight: bold;
+  color: #84a98c;
+}
+
 .list-container {
   overflow-y: scroll;
   scrollbar-color: #52796f #cad2c5;
@@ -120,7 +125,7 @@ footer {
 
 @media (max-width: 900px) {
   .app-container {
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
     box-shadow: none;
   }
